@@ -13,7 +13,7 @@ String stockToJson(List<Stock> data) =>
 class Stock {
   Stock({
     this.id = -1,
-    this.description,
+    this.description = '',
     this.imageName,
     this.price = 0,
     this.stock = 0,

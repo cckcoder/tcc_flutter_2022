@@ -530,3 +530,4 @@ build/app/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt
 build/app/tmp/kotlin-classes/debug/com/example/inventory_workshop/MainActivity.class
 build/app/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module
 build/app/tmp/packLibsflutterBuildDebug/MANIFEST.MF
+.idea/vcs.xml

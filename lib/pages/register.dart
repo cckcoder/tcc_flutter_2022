@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_workshop/networks/userAPI.dart';
+import 'package:inventory_workshop/utils/snackbar.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -58,8 +60,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  register() {
-    if (_formKey.currentState!.validate()) {}
+  register() async {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      UserAPI userAPI = UserAPI();
+      String msg =
+          await userAPI.register(username: username, password: password);
+      SnackBarHelper.show(context: context, msg: msg);
+      Navigator.pop(context);
+    }
   }
 
   String? _validateSting(String? value) {
